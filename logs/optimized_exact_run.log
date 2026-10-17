@@ -1,0 +1,10 @@
+Rows: 3413 | columns: anchor | texts: 3413 | unique: 2761 (19% saved by dedup)
+Dimension: 768 | batch size: 1 | workers: 1
+Saved embeddings_exact/anchor.npy (3413, 768)
+======================================================================
+TIMING
+  Load + dedup:       0.01 s
+  API requests:     258.73 s  (2761 requests, 0.09 s avg per request)
+  Map + save:         0.03 s
+  TOTAL:            258.76 s
+  Throughput:           13 rows/s (75.82 ms per row)

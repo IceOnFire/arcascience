@@ -1,0 +1,47 @@
+[
+  {
+    "step": "Keep-alive + no sleep (1 text/request, sequential, no dedup)",
+    "texts": 3413,
+    "requests": 3413,
+    "batch_size": 1,
+    "workers": 1,
+    "gzip": true,
+    "seconds": 221.49
+  },
+  {
+    "step": "+ deduplication",
+    "texts": 2761,
+    "requests": 2761,
+    "batch_size": 1,
+    "workers": 1,
+    "gzip": true,
+    "seconds": 180.95
+  },
+  {
+    "step": "+ batching (128 texts/request, sequential)",
+    "texts": 2761,
+    "requests": 22,
+    "batch_size": 128,
+    "workers": 1,
+    "gzip": true,
+    "seconds": 22.81
+  },
+  {
+    "step": "+ concurrency (8 parallel requests) = final",
+    "texts": 2761,
+    "requests": 22,
+    "batch_size": 128,
+    "workers": 8,
+    "gzip": true,
+    "seconds": 12.27
+  },
+  {
+    "step": "final without gzip (for comparison)",
+    "texts": 2761,
+    "requests": 22,
+    "batch_size": 128,
+    "workers": 8,
+    "gzip": false,
+    "seconds": 23.26
+  }
+]

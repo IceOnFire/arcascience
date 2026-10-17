@@ -1,0 +1,12 @@
+Rows: 3413 | columns: anchor, positive, negative | texts: 10239 | unique: 9053 (12% saved by dedup)
+Dimension: 768 | batch size: 128 | workers: 8
+Saved /private/tmp/claude-501/-Users-iceonfire-Projects-arcascience-technical-test/4f7d17b9-5f31-4271-aaf0-b97d1b9a62d9/scratchpad/timing/anchor.npy (3413, 768)
+Saved /private/tmp/claude-501/-Users-iceonfire-Projects-arcascience-technical-test/4f7d17b9-5f31-4271-aaf0-b97d1b9a62d9/scratchpad/timing/positive.npy (3413, 768)
+Saved /private/tmp/claude-501/-Users-iceonfire-Projects-arcascience-technical-test/4f7d17b9-5f31-4271-aaf0-b97d1b9a62d9/scratchpad/timing/negative.npy (3413, 768)
+======================================================================
+TIMING
+  Load + dedup:       0.01 s
+  API requests:      30.95 s  (71 requests, 3.49 s avg per request)
+  Map + save:         0.04 s
+  TOTAL:             31.00 s
+  Throughput:          330 rows/s (3.03 ms per row)

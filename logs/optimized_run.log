@@ -1,0 +1,10 @@
+Rows: 3413 | columns: anchor | texts: 3413 | unique: 2761 (19% saved by dedup)
+Dimension: 768 | batch size: 128 | workers: 8
+Saved /private/tmp/claude-501/-Users-iceonfire-Projects-arcascience-technical-test/4f7d17b9-5f31-4271-aaf0-b97d1b9a62d9/scratchpad/timing/anchor.npy (3413, 768)
+======================================================================
+TIMING
+  Load + dedup:       0.01 s
+  API requests:      11.34 s  (22 requests, 4.12 s avg per request)
+  Map + save:         0.02 s
+  TOTAL:             11.37 s
+  Throughput:          300 rows/s (3.33 ms per row)

@@ -1,0 +1,23 @@
+1. single request (median of 10): {'round_trip_keepalive_s': 0.06340372902923264, 'round_trip_new_connection_s': 0.16816022948478349, 'server_total_s': 0.01014554500579834, 'model_inference_s': 0.005915045738220215}
+2. payload: {'kb_per_embedding_plain': 15.844291687011719, 'mb_total_plain': 42.72079037874937, 'gzip_ratio': 2.3142188851149563}
+3. sweep batch  32 x  8 workers: 30.3 s
+3. sweep batch  64 x 16 workers: 13.1 s
+3. sweep batch 128 x  4 workers: 11.2 s
+3. sweep batch 128 x  8 workers: 12.2 s
+3. sweep batch 128 x 16 workers: 13.0 s
+3. sweep batch 256 x  8 workers: 12.2 s
+4. determinism vs naive: {
+  "single text per request, sequential": {
+    "identical_rows_pct": 100.0,
+    "max_abs_diff": 0.0
+  },
+  "batches of 100": {
+    "identical_rows_pct": 2.0,
+    "max_abs_diff": 0.0016100481152534485
+  },
+  "single text per request, 64 concurrent": {
+    "identical_rows_pct": 70.5,
+    "max_abs_diff": 0.0005040373653173447
+  }
+}
+Saved logs/profile.json

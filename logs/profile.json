@@ -1,0 +1,93 @@
+{
+  "single_request": {
+    "round_trip_keepalive_s": 0.06340372902923264,
+    "round_trip_new_connection_s": 0.16816022948478349,
+    "server_total_s": 0.01014554500579834,
+    "model_inference_s": 0.005915045738220215
+  },
+  "by_batch_size": [
+    {
+      "batch_size": 1,
+      "server_total_s": 0.010441064834594727,
+      "round_trip_gzip_s": 0.058502874977421016,
+      "round_trip_plain_s": 0.06373887503286824,
+      "kb_gzip": 7.5498046875,
+      "kb_plain": 16.0576171875
+    },
+    {
+      "batch_size": 32,
+      "server_total_s": 0.025556564331054688,
+      "round_trip_gzip_s": 0.3088402079883963,
+      "round_trip_plain_s": 0.3674561670050025,
+      "kb_gzip": 220.509765625,
+      "kb_plain": 507.3271484375
+    },
+    {
+      "batch_size": 128,
+      "server_total_s": 0.07909512519836426,
+      "round_trip_gzip_s": 0.9680676670395769,
+      "round_trip_plain_s": 1.263213625003118,
+      "kb_gzip": 877.1953125,
+      "kb_plain": 2027.9736328125
+    },
+    {
+      "batch_size": 256,
+      "server_total_s": 0.14966416358947754,
+      "round_trip_gzip_s": 1.7785247080028057,
+      "round_trip_plain_s": 2.53820499998983,
+      "kb_gzip": 1752.703125,
+      "kb_plain": 4056.138671875
+    }
+  ],
+  "payload": {
+    "kb_per_embedding_plain": 15.844291687011719,
+    "mb_total_plain": 42.72079037874937,
+    "gzip_ratio": 2.3142188851149563
+  },
+  "sweep": [
+    {
+      "batch_size": 32,
+      "workers": 8,
+      "seconds": 30.333448708988726
+    },
+    {
+      "batch_size": 64,
+      "workers": 16,
+      "seconds": 13.14248849998694
+    },
+    {
+      "batch_size": 128,
+      "workers": 4,
+      "seconds": 11.193024375010282
+    },
+    {
+      "batch_size": 128,
+      "workers": 8,
+      "seconds": 12.243317875021603
+    },
+    {
+      "batch_size": 128,
+      "workers": 16,
+      "seconds": 13.008424624975305
+    },
+    {
+      "batch_size": 256,
+      "workers": 8,
+      "seconds": 12.18116066697985
+    }
+  ],
+  "determinism": {
+    "single text per request, sequential": {
+      "identical_rows_pct": 100.0,
+      "max_abs_diff": 0.0
+    },
+    "batches of 100": {
+      "identical_rows_pct": 2.0,
+      "max_abs_diff": 0.0016100481152534485
+    },
+    "single text per request, 64 concurrent": {
+      "identical_rows_pct": 70.5,
+      "max_abs_diff": 0.0005040373653173447
+    }
+  }
+}

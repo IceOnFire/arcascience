@@ -1,0 +1,5 @@
+  221.49 s  Keep-alive + no sleep (1 text/request, sequential, no dedup)
+  180.95 s  + deduplication
+   22.81 s  + batching (128 texts/request, sequential)
+   12.27 s  + concurrency (8 parallel requests) = final
+   23.26 s  final without gzip (for comparison)
